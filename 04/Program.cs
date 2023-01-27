@@ -1,11 +1,11 @@
-﻿// Задайте двумерный массив. Напишите программу, 
-// которая поменяет местами первую и последнюю строку массива.
+﻿// Задайте двумерный массив из целых чисел. 
+// Напишите программу, которая удалит строку 
+// и столбец, на пересечении которых расположен 
+// наименьший элемент массива.
 
 Console.Clear();
-
 int[,] array = GetArray(6, 8, 0, 10);
 PrintArray(array);
-ReverseRows(array);
 PrintArray(array);
 
 int[,] GetArray(int m, int n, int minValue, int maxValue)
@@ -33,13 +33,16 @@ void PrintArray(int[,] inArray)
     }
 }
 
-void ReverseRows(int[,] inArray)
+int[,] DeleteRowColumn(int[,] array)
 {
-    Console.WriteLine("Меняем первую и последнюю строку массива");
-    for (int i = 0; i < inArray.GetLength(1); i++)
+    int[,] newArray = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
+    int minNumber = array[0, 0];
+    for (int i = 0; i < length; i++)
     {
-        int tmp = inArray[0, i];
-        inArray[0, i] = inArray[inArray.GetLength(0) - 1, i];
-        inArray[inArray.GetLength(0) - 1, i] = tmp;
+        for (int j = 0; j < length; j++)
+        {
+
+        }
+
     }
 }
